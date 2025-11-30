@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "eBay Seller Outreach Tracker",
+  "description": "Prevents messaging the same eBay seller twice by checking your API.",
+  "version": "1.0",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://sync.mwtakeoffs.com/*"],
+  "content_scripts": [
+    {
+      "matches":  [
+  "https://www.ebay.com/*",
+  "https://www.ebay.com.au/*",
+  "https://www.ebay.co.uk/*",
+  "https://www.ebay.ca/*",
+  "https://www.ebay.de/*",
+  "https://www.ebay.fr/*",
+  "https://www.ebay.it/*",
+  "https://www.ebay.es/*"
+]
+,
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
